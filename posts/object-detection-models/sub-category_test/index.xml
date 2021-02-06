@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sub-Category on Toha</title>
+    <link>http://example.org/posts/object-detection-models/sub-category_test/</link>
+    <description>Recent content in Sub-Category on Toha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2020 08:06:25 +0600</lastBuildDate><atom:link href="http://example.org/posts/object-detection-models/sub-category_test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Object detection in deep learning</title>
+      <link>http://example.org/posts/object-detection-models/sub-category_test/</link>
+      <pubDate>Tue, 08 Sep 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://example.org/posts/object-detection-models/sub-category_test/</guid>
+      <description>The goal is to predict the localization of objects in an image via bounding boxes and the classes of the located objects. With deep learning approach we tackle this problem with two type of models called one stage or two stages detectors. Even if they share a common gold the two approach are sightly different and can be summarized as follow:
+Common tricks used in object detection model Bounding Box Regression We define by p $=(p_{x},p_{y},p_{w},p_{h})$ the prediction of the bounding box regressor, where x and y correspond to the centred coordinate and h and w its height, weight the corresponding ground truth box coordinates g $=(g_{x},g_{y},g_{w},g_{h})$, the regressor is configured to learn scale-invariant transformation between two centers and log-scale transformation between widths and heights.</description>
+    </item>
+    
+    <item>
+      <title>Object detection in deep learning</title>
+      <link>http://example.org/posts/object-detection-models/sub-category_test/index1/</link>
+      <pubDate>Tue, 08 Sep 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://example.org/posts/object-detection-models/sub-category_test/index1/</guid>
+      <description>The goal is to predict the localization of objects in an image via bounding boxes and the classes of the located objects. With deep learning approach we tackle this problem with two type of models called one stage or two stages detectors. Even if they share a common gold the two approach are sightly different and can be summarized as follow:
+Common tricks used in object detection model Bounding Box Regression We define by p $=(p_{x},p_{y},p_{w},p_{h})$ the prediction of the bounding box regressor, where x and y correspond to the centred coordinate and h and w its height, weight the corresponding ground truth box coordinates g $=(g_{x},g_{y},g_{w},g_{h})$, the regressor is configured to learn scale-invariant transformation between two centers and log-scale transformation between widths and heights.</description>
+    </item>
+    
+    <item>
+      <title>R-CNN Family</title>
+      <link>http://example.org/posts/object-detection-models/sub-category_test/rich-content-test/</link>
+      <pubDate>Tue, 08 Sep 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://example.org/posts/object-detection-models/sub-category_test/rich-content-test/</guid>
+      <description>This sample post tests the followings:
+ Category, sub-category nesting in the sidebar. Hero image and other images are in images folder inside this post directory. Different media rendering like image, tweet, YouTube video, Vimeo video etc.  Image Sample  Tweet Sample “In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”
+— Jan Tschichold pic.twitter.com/gcv7SrhvJb
+&amp;mdash; Graphic Design History (@DesignReviewed) January 17, 2019   YouTube Video Sample    Vimeo Video Sample   </description>
+    </item>
+    
+  </channel>
+</rss>

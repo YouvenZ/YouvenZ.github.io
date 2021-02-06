@@ -11,31 +11,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="fr"
                 href="http://example.org/fr/categories/"
                 />
@@ -50,31 +25,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="fr"
                 href="http://example.org/fr/tags/"
                 />
@@ -86,31 +36,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://example.org/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/"
                 />
     <xhtml:link
                 rel="alternate"

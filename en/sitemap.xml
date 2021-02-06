@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/posts/object-detection-models/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/object-detection-models/sub-category_test/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/object-detection-models/sub-category_test/index1/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/object-detection-models/sub-category_test/rich-content-test/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/object-detection-models/sub-category_test/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-09-08T08:06:25+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://example.org/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/category/sub-category/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/category/sub-category/rich-content/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/posts/introduction/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
   </url>
@@ -13,58 +68,13 @@
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>http://example.org/posts/variational-auto-encoders/sub-category/rich-content/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/category/sub-category/rich-content/</loc>
+    <loc>http://example.org/posts/variational-auto-encoders/sub-category/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/posts/category/sub-category/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://example.org/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://example.org/"
-                />
   </url>
   
   <url>
@@ -73,36 +83,16 @@
   </url>
   
   <url>
+    <loc>http://example.org/posts/variational-auto-encoders/</loc>
+    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/categories/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="http://example.org/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -115,33 +105,8 @@
     <loc>http://example.org/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="bn"
-                href="http://example.org/bn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="fr"
                 href="http://example.org/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://example.org/id/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://example.org/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://example.org/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="http://example.org/it/tags/"
                 />
     <xhtml:link
                 rel="alternate"

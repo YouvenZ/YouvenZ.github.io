@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object detection in deep learning</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Sample post with multiple images, embedded video ect." />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Toha</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/">Category</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/sub-category/">Sub-Category</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/sub-category/rich-content/">Exemple</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/variational-auto-encoders/sub-category/rich-content/">Rich Content</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/object-detection-models/">Object detection models</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/object-detection-models/sub-category_test/index1/">Rich Content Binks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/variational-auto-encoders/">Variational auto encoders</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/markdown-sample/">Markdown Sample</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(http://example.org/posts/category/sub-category/rich-content/images/hero.svg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/Profil_Zeghlache-Rachid.png'/>
+          <h5 class="author-name">Rachid Zeghlache</h5>
+          <p>September 8, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Object detection in deep learning</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p>The goal is to predict the localization of objects in an image via bounding boxes and the classes of the located objects. With deep learning approach we tackle this problem with two type of models called one stage or two stages detectors. Even if they share a common gold the two approach are sightly different and can be summarized as follow:</p>
+<h1 id="common-tricks-used-in-object-detection-model">Common tricks used in object detection model</h1>
+<h2 id="bounding-box-regression">Bounding Box Regression</h2>
+<p>We define by p $=(p_{x},p_{y},p_{w},p_{h})$ the prediction of the bounding box regressor, where x and y correspond to the centred coordinate and h and w its height, weight the corresponding ground truth box coordinates 
+g $=(g_{x},g_{y},g_{w},g_{h})$, the regressor is configured to learn scale-invariant transformation between two centers and log-scale transformation between widths and heights. All the transformation functions take p as input.</p>
+<p>| &mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; |
+| $$\hat{g}_x = p_w d_x(\mathbf{p}) + p_x$$ | $$\hat{g}_y = p_h d_y(\mathbf{p}) + p_y$$ |
+| $$\hat{g}_w = p_w \exp({d_w(\mathbf{p})}) $$ | $$\hat{g}_h = p_h \exp({d_h(\mathbf{p})})$$ |
+| $$t_x = (g_x - p_x) / p_w$$ | $$t_y = (g_y - p_y) / p_h$$ |
+| $$t_w = \log(g_w/p_w)$$ | $$t_h = \log(g_h/p_h)$$ |</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Syntax</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:right">Test Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Header</td>
+<td style="text-align:center">Title</td>
+<td style="text-align:right">Here&rsquo;s this</td>
+</tr>
+<tr>
+<td style="text-align:left">$$t_w = \log(g_w/p_w)$$ $$t_w = \log(g_w/p_w)$$ $t_w = \log(g_w/p_w)$ (1)</td>
+<td style="text-align:center">Text</td>
+<td style="text-align:right">And more</td>
+</tr>
+</tbody>
+</table>
+<center>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 1 is</td>
+<td style="text-align:center">left-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+</center>
+<h2 id="intersection-over-union-iou">Intersection Over Union (IoU)</h2>
+<p>The IoU is an evaluation metric based on the degree of overlap between the an abject (bounding box in our case) and the actual ground truth bounding box (hand labeled).</p>
+<p>$$IoU(\mathcal{A},\mathcal{B}) = \frac{\left|\mathcal{A} \cap \mathcal{B}\right|}{\left| \mathcal{A} \cup \mathcal{B}\right|}$$</p>
+<h2 id="hard-example-mining">Hard example mining</h2>
+<p>Detectors usually perform more predictions than the number of objects present in the image. Unfortunately there are much more negative matches than positive matches. This creates a class imbalance which hurts training. We are training the model to learn background space rather than detecting objects. However, we need negative sampling so it can learn what constitutes a bad prediction. By picking the top ones and makes sure the ratio between the picked negatives and positives is at most 3:1. This process allows fast and stable training.</p>
+<h2 id="non-maximal-suppression-in-inference">Non-maximal suppression in inference</h2>
+<p>The algorithm is quite simple yet extremely effective and necessary for our designed problem however it can required a lot computation power. Because detectors are making duplicate detection for the same object. To tackle this problem the non-maximal suppression is applied to remove duplication with lower confidence. We sort the predictions by the confidence scores and go down the list one by one. If any previous prediction has the same class and IoU greater than 0.5 with the current prediction, we remove it from the list.</p>
+<h2 id="anchors">Anchors</h2>
+<p>Because  using an approximation of the coordinates of the bounding box via row pixel is sub optimal owing to high variance of pixels values we introduced the concept of anchors. The Archors can be seen has plausible bounding boxes candidates that can be generates from the input image, for each pixel in the image we generally generate 9 anchors with the following technics let&rsquo;s assume that the input image has a height of $h$ and width of $w$. We generate anchor boxes with different shapes centered on every pixels of the image. Assume the size is s$\in$(0,1], the aspect ratio is r$&gt;$0, and the width and height of the anchor box are $ws\sqrt{r}$ and $hs/\sqrt{r}$, respectively. When the center position is given, an anchor box with known width and height is determined.</p>
+<p align="center">
+  <img title="Anchors" src="https://raw.githubusercontent.com/YouvenZ/YouvenZ.github.io/master/images/Anchors.PNG">
+</p>
+<p>During training anchors box need to be labeled with two labels, the target class and the offset of the ground truth bounding box relative to the archors box. The process of assigning categories to each anchors box and their respective offset with enable the prediction head to predict good bounding boxes and classes target. The assignment is performed by using the similarity measure, the Jacquard distance also know as IoU metric.</p>
+<p>For a given  object bounding box $\mathcal{B}<em>{i'}$
+and for all the anchors boxes, $\mathcal{A}</em>{j'}$ the index of the ground truth archors box is 
+the index of the ground truth archors box is determined by the index that respect $\max_{j}IoU(\mathcal{B}_{i}$ 
+,$\mathcal{A}_{i})$ during the training we keep all anchors that are kept are also known as positive anchors and the opposite the anchors that are not selected are called negative anchors</p>
+<h2 id="region-of-interest-pooling-roi-poolling">Region of interest pooling (ROI poolling)</h2>
+<p>ROI pooling is a type of max pooling layer that convert features and projected region of the image of any given size, h x w, into a small fixed window, H x W. The input region is divided into H x W grids, approximately every sub window of size h/H x w/W. Then apply max-pooling in each grid.</p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hugo-toha/hugo-toha.github.io/edit/master/content/posts%5cobject%20detection%20models%5csub-category_test%5cindex1.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/object-detection-models/sub-category_test/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Object detection in deep learning</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/object-detection-models/sub-category_test/rich-content-test/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>R-CNN Family</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bounding-box-regression">Bounding Box Regression</a></li>
+    <li><a href="#intersection-over-union-iou">Intersection Over Union (IoU)</a></li>
+    <li><a href="#hard-example-mining">Hard example mining</a></li>
+    <li><a href="#non-maximal-suppression-in-inference">Non-maximal suppression in inference</a></li>
+    <li><a href="#anchors">Anchors</a></li>
+    <li><a href="#region-of-interest-pooling-roi-poolling">Region of interest pooling (ROI poolling)</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#achievements">Achievements</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>youven.z@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;33768459445</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+    
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+    </head>
+    <body>
+        <script>
+          renderMathInElement(
+              document.body,
+              {
+                  delimiters: [
+                      {left: "$$", right: "$$", display: true},
+                      {left: "\\[", right: "\\]", display: true},
+                      {left: "$", right: "$", display: false},
+                      {left: "\\(", right: "\\)", display: false},
+                  ]
+              }
+          );
+        </script>
+    </body>
+    </html>
+
+
+  </body>
+</html>
