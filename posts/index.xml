@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on YouvenZ</title>
-    <link>http://example.org/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on YouvenZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2020 08:06:25 +0600</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Sep 2020 08:06:25 +0600</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>http://example.org/posts/introduction/</link>
+      <link>/posts/introduction/</link>
       <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
       
-      <guid>http://example.org/posts/introduction/</guid>
+      <guid>/posts/introduction/</guid>
       <description>Greeting! This is an introduction to my posts. In this section I will present Deep learning tutorials applied to healtcare and some cool projects that I have been doing around medical imaging and deep learning most often.
  Some focus on segmentation, classification, object detection models using deep learning for medical imaging  </description>
     </item>
     
     <item>
       <title>Markdown Samples</title>
-      <link>http://example.org/posts/markdown-sample/</link>
+      <link>/posts/markdown-sample/</link>
       <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
       
-      <guid>http://example.org/posts/markdown-sample/</guid>
+      <guid>/posts/markdown-sample/</guid>
       <description>This is a sample post intended to test the followings:
  A different post author. Table of contents. Markdown content rendering. Math rendering. Emoji rendering.   Markdown Syntax Rendering Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings. &amp;lt;h1&amp;gt; is the highest section level while &amp;lt;h6&amp;gt; is the lowest.
 H1 H2 H3 H4 H5 H6 Paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur?</description>
